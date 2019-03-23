@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Kaiki | Home</title>
+<head>
+	<!-- All copyrights belong to their respective owners. Please don't sue 👀 -->
+	<!-- Contact Email: react@live.com -->
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<script src="js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<meta property="title" content="Kore wa Kaiki">
+	<meta name="description" content="I can't actually code">
+	<meta name="author" content="Kore wa Kaiki">
+	<meta charset='utf-8'>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script>
+	// Loader //
+	$(window).load(function() {
+		$(".se-pre-con").fadeOut("fast");;
+	});
+</script>
+<iframe src="1sec.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+<body class="crt">
+	<div class="se-pre-con"></div>
+	<div class="container">
+		<img src="avi.png" class="fade grow" id="top-image" />
+		<p id="title" class="crt">Kore wa Kaiki</p>
+		<hr class="line-grow" />
+		<p class="comein-left">Just some weeaboo learning to code, don't mind how awful it is.</p>
+		<p class="comein-right">I promise nothing and deliver less...<span class="blink">_</span></p>
+		<br />
+		<p style="color: green; cursor: pointer;" id="recommend" class="effect grow">Recommendations</p>
+		<p style="color: cyan;" class="effect grow">Music: Nymano - See U Tonight</p>
+		<br />
+		<p class="typewriter"><a href="https://twitter.com/korewakaiki" class="social">TWITTER</a> | <a href="https://facebook.com/stealyowaifu" class="social">FACEBOOK</a> | <a href="https://anilist.co/user/Vro/" class="social">ANILIST</a> | <a href="https://www.twitch.tv/kore_wa_kaiki" class="social">TWITCH</a> | <a rel="me" href="https://niu.moe/@Kaiki" class="social">Mastodon</a></a></p>
+		<p class="fade">Currently learning <span class="highlight">Python</span> and <span class="highlight">C#</span>.</p>
+		<p id="mute" onclick="muteBg()">Mute</p>
+		<a href="https://twitter.com/dai_gazacy/status/991302279432044544"><p id="cred">Avi Credit</p></a>
+		<a href="https://www.youtube.com/watch?v=CrOUCJay_7U" target="blank"><p class="oi">Blessed Song</p></a>
+		<div id="popup" class="modal">
+			<div class="pop-content">
+				<span class="close">&times;</span>
+				<p>Recommendations, AKA my shit taste...</p> 
+				<hr />
+				<p>
+					<span style="color: red;">Anime:</span><br />
+					The Monogatari Series <br />
+					Aria The Origination <br />
+					Katanagatari <br />
+					Baccano! <br />
+					JoJo's Bizarre Adventure <br />
+					Serial Experiments Lain <br />
+					Initial D Series <br />
+					Fate Series <br />
+					Index/Railgun <br />
+					Kuzu no Honkai <br />
+					<br />
+					<span style="color: cyan;">Video Games:</span><br />
+					Persona Series <br />
+					Divinity: Original Sin 2 <br />
+					Hotlne Miami 1 & 2 <br />
+					Metal Gear Series <br />
+					Steins;gate <br />
+					VA-11 HALL-A <br />
+				</p>
+			</div>
+		</div>
+	</div>
+	<audio autoplay loop id="volumedown">
+		<source src="audio.mp3" type="audio/mpeg">
+	</audio>
+	<div id="projects">
+		<h2>Contact</h2>
+		<p>Contact me in any way you desire. I make sure everything at least once daily. For the most success add Kaiki#5333 on Discord or email me <a href="mailto:react@live.com" style="color: #707070;">here</a></p>
+		<footer class="foot"><p>&#169; Kore wa Kaiki</p></footer>
+	</div>
+	<script>
+		// Audio Volume //
+		 document.getElementById("volumedown").volume = 0.06;
+		 function muteBg() {
+		 document.getElementById("volumedown").volume = 0;
+		 }
+		 var modal = document.getElementById('popup');
+		 var btn = document.getElementById("recommend");
+		 var span = document.getElementsByClassName("close")[0];
+
+		 btn.onclick = function() {
+		 	modal.style.display = "block";
+		 }
+		 span.onclick = function() {
+		 	modal.style.display = "none";
+		 }
+		 window.onclick = function(event) {
+		 	if (event.target == modal) {
+		 		modal.style.display = "none";
+		 	}
+		 }
+
+		 $(document).ready(function(){
+		 	$("#pro").click(function(){
+		 		$("#projects").slideToggle("slow");
+		 	});
+		 });
+	</script>
+</body>
+</html>
